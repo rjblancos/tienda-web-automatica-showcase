@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motor de tiendas · Kusarive Solutions LLC</title>
+<meta name="description" content="Tu tienda propia en tu dominio: digital, física o las dos, con entrega automática, panel sin código y seis portadas.">
+<style>
+:root{--bg:#fafaf7;--card:#fff;--txt:#1d1d1b;--suave:#5c5c57;--linea:#e7e5df;--acento:#4f46e5;--acento-txt:#ffffff;--ok:#18794e}
+@media (prefers-color-scheme:dark){:root{--bg:#121211;--card:#1c1c1a;--txt:#efeee9;--suave:#a3a29b;--linea:#2e2d2a;--acento:#818cf8;--ok:#4cc38a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.envoltura{max-width:1040px;margin:0 auto;padding:0 16px}
+header{padding:28px 0 8px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.marca{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.marca span{background:var(--acento);color:var(--acento-txt);border-radius:6px;padding:2px 7px;margin-right:6px}
+.idioma button{background:none;border:1px solid var(--linea);color:var(--txt);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit;font-size:.85rem}
+.idioma button[aria-pressed=true]{background:var(--txt);color:var(--bg)}
+.portada{padding:48px 0 24px}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+.lema{font-size:1.15rem;color:var(--suave);max-width:680px;margin:0}
+.estado{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:.9rem;color:var(--suave)}
+.estado i{width:9px;height:9px;border-radius:50%;background:var(--ok);display:inline-block}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:32px 0 8px}
+.cifra{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:18px 20px}
+.cifra b{display:block;font-size:2rem;letter-spacing:-.02em}
+.cifra small{color:var(--suave)}
+.nota{font-size:.82rem;color:var(--suave);margin:4px 0 0}
+h2{font-size:1.5rem;margin:56px 0 16px;letter-spacing:-.01em}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.bloque{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:18px 20px}
+.bloque h3{margin:0 0 6px;font-size:1.02rem}
+.bloque p{margin:0;color:var(--suave);font-size:.95rem}
+.capturas{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:start}
+.capturas figure{margin:0}
+.capturas img{width:100%;height:auto;border-radius:12px;border:1px solid var(--linea);display:block}
+.capturas figcaption{font-size:.85rem;color:var(--suave);margin-top:6px}
+.pila{display:grid;gap:14px}
+.flujo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.95rem}
+.flujo span{background:var(--card);border:1px solid var(--linea);border-radius:10px;padding:8px 12px}
+.flujo em{color:var(--suave);font-style:normal}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--linea);border-radius:14px;overflow:hidden}
+td{padding:12px 16px;border-top:1px solid var(--linea);vertical-align:top;font-size:.95rem}
+tr:first-child td{border-top:0}
+td:first-child{font-weight:700;white-space:nowrap;width:1%}
+.contacto{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:22px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.contacto a{color:var(--txt);font-weight:600}
+.boton{background:var(--acento);color:var(--acento-txt)!important;text-decoration:none;border-radius:10px;padding:10px 16px}
+footer{padding:40px 0;color:var(--suave);font-size:.85rem}
+[data-en]{display:none}
+html[lang=en] [data-es]{display:none}
+html[lang=en] [data-en]{display:revert}
+html[lang=en] .cifra b[data-en]{display:block}
+@media (max-width:720px){.capturas{grid-template-columns:1fr}td:first-child{white-space:normal}}
+.ancha{margin:24px 0 8px}.ancha img{width:100%;height:auto;border-radius:14px;border:1px solid var(--linea);display:block}
+.cta{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:28px;margin-top:8px}
+.cta h3{margin:0 0 6px;font-size:1.3rem}.cta p{margin:0 0 16px;color:var(--suave)}
+.movil{display:flex;gap:14px}.movil figure{flex:1}
+.portadas-movil{display:none}
+@media (max-width:700px){.ancha{display:none}.portadas-movil{display:grid;gap:14px;margin:20px 0 8px}
+.portadas-movil img{width:100%;height:auto;border-radius:12px;border:1px solid var(--linea);display:block}
+.portadas-movil figcaption{font-weight:700;margin-top:6px}}
+</style>
+</head>
+<body>
+<div class="envoltura">
+<header>
+  <div class="marca"><span>A</span><span style="background:none;color:inherit;padding:0" data-es>Motor de tiendas</span><span style="background:none;color:inherit;padding:0" data-en>Store engine</span></div>
+  <div class="idioma" role="group" aria-label="Idioma / Language">
+    <button type="button" data-l="es" aria-pressed="true">ES</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<section class="portada">
+  <h1 data-es>Tu tienda propia, que vende y entrega sola.</h1><h1 data-en>Your own store, that sells and delivers on its own.</h1>
+  <p class="lema" data-es>Digital, física o las dos a la vez, en tu dominio y con tu marca. Lo digital se entrega en cuanto se confirma el pago, y todo se maneja desde un panel sin tocar código.</p><p class="lema" data-en>Digital, physical or both, on your domain and with your brand. Digital products deliver as soon as payment is confirmed, and everything is run from a dashboard without touching code.</p>
+  <div class="estado"><i></i><span data-es>En producción en 7 tiendas · Sistema propietario de Kusarive Solutions LLC</span><span data-en>In production in 7 stores · Proprietary system by Kusarive Solutions LLC</span></div>
+  <div class="cifras">
+    <div class="cifra"><b data-es>+1.800</b><b data-en>1,800+</b><small data-es>pedidos entregados</small><small data-en>orders delivered</small></div>
+    <div class="cifra"><b data-es>+19.000 USD</b><b data-en>USD 19,000+</b><small data-es>vendidos por las tiendas</small><small data-en>sold by the stores</small></div>
+    <div class="cifra"><b data-es>+4.700</b><b data-en>4,700+</b><small data-es>cuentas y claves entregadas</small><small data-en>accounts and keys delivered</small></div>
+  </div>
+  <p class="nota" data-es>Cifras reales de las 7 tiendas a 27-oct-2026, con el historial que trajeron al migrar.</p><p class="nota" data-en>Real figures from the 7 stores as of 27-Oct-2026, including the history they brought when migrating.</p>
+</section>
+
+<h2 data-es>Seis portadas, un clic</h2><h2 data-en>Six home layouts, one click</h2>
+<div class="portadas-movil"><figure><img src="capturas/portada-clasica.jpg" alt="Clásica" loading="lazy" width="800" height="500"><figcaption>Clásica</figcaption></figure><figure><img src="capturas/portada-neon.jpg" alt="Neón" loading="lazy" width="800" height="500"><figcaption>Neón</figcaption></figure><figure><img src="capturas/portada-mosaico.jpg" alt="Mosaico" loading="lazy" width="800" height="500"><figcaption>Mosaico</figcaption></figure><figure><img src="capturas/portada-escaparate.jpg" alt="Escaparate" loading="lazy" width="800" height="500"><figcaption>Escaparate</figcaption></figure><figure><img src="capturas/portada-franjas.jpg" alt="Franjas" loading="lazy" width="800" height="500"><figcaption>Franjas</figcaption></figure><figure><img src="capturas/portada-directorio.jpg" alt="Directorio" loading="lazy" width="800" height="500"><figcaption>Directorio</figcaption></figure></div>
+<div class="ancha"><img src="capturas/portadas.jpg" alt="Las seis portadas / The six home layouts" loading="lazy" width="2512" height="1188"></div>
+<p class="nota" data-es>La misma tienda de demostración con cada portada: Clásica, Neón, Mosaico, Escaparate, Franjas y Directorio.</p><p class="nota" data-en>The same demo store with each layout: Classic, Neon, Mosaic, Showcase, Stripes and Directory.</p>
+
+<h2 data-es>Qué hace</h2><h2 data-en>What it does</h2>
+<div class="rejilla">
+  <div class="bloque"><h3 data-es>Digital y físico</h3><h3 data-en>Digital and physical</h3>
+    <p data-es>Dos tiendas en un solo sitio, cada una con su catálogo, o solo una de las dos.</p><p data-en>Two stores in one site, each with its own catalog, or just one of them.</p></div>
+  <div class="bloque"><h3 data-es>Entrega automática</h3><h3 data-en>Automatic delivery</h3>
+    <p data-es>Cada venta entrega la siguiente credencial o clave libre del inventario, sin intervención humana.</p><p data-en>Each sale delivers the next free credential or key from inventory, with no human involvement.</p></div>
+  <div class="bloque"><h3 data-es>Suscripciones y reposición</h3><h3 data-en>Subscriptions and replacement</h3>
+    <p data-es>Vencimientos con aviso al cliente, y reposición en un clic dentro de la garantía.</p><p data-en>Expiry dates with customer reminders, and one-click replacement within the warranty.</p></div>
+  <div class="bloque"><h3 data-es>Billetera, regalos y puntos</h3><h3 data-en>Wallet, gifts and points</h3>
+    <p data-es>Saldo recargable, tarjetas de regalo que se compran y canjean, y puntos por compra.</p><p data-en>Rechargeable balance, gift cards to buy and redeem, and points per purchase.</p></div>
+  <div class="bloque"><h3 data-es>Cobro automático o manual</h3><h3 data-en>Automatic or manual payment</h3>
+    <p data-es>Pasarela con confirmación sola o comprobante con revisión, con comisiones y descuentos por método.</p><p data-en>A gateway that confirms on its own or receipts with review, with fees and discounts per method.</p></div>
+  <div class="bloque"><h3 data-es>Márgenes reales</h3><h3 data-en>Real margins</h3>
+    <p data-es>Cuánto queda de cada venta tras el coste, las comisiones y las reposiciones.</p><p data-en>What is left of each sale after cost, fees and replacements.</p></div>
+</div>
+
+<h2 data-es>Capturas</h2><h2 data-en>Screenshots</h2>
+<div class="capturas">
+  <div class="pila">
+    <figure><img src="capturas/ficha-producto.jpg" alt="Ficha / Product page" loading="lazy" width="1600" height="1000"><figcaption data-es>Ficha de producto con entrega, garantía y opciones.</figcaption><figcaption data-en>Product page with delivery, warranty and options.</figcaption></figure>
+    <figure><img src="capturas/panel-tablero.jpg" alt="Tablero / Dashboard" loading="lazy" width="1600" height="1125"><figcaption data-es>Tablero del panel.</figcaption><figcaption data-en>Admin dashboard.</figcaption></figure>
+    <figure><img src="capturas/panel-margenes.jpg" alt="Márgenes / Margins" loading="lazy" width="1600" height="1000"><figcaption data-es>Márgenes y reposiciones por producto.</figcaption><figcaption data-en>Margins and replacements per product.</figcaption></figure>
+    <figure><img src="capturas/area-cliente.jpg" alt="Área del cliente / Customer area" loading="lazy" width="1600" height="650"><figcaption data-es>El cliente ve lo entregado y cuándo vence.</figcaption><figcaption data-en>Customers see what was delivered and when it expires.</figcaption></figure>
+  </div>
+  <div class="pila">
+    <figure><img src="capturas/movil-portada.jpg" alt="Móvil / Mobile" loading="lazy" width="520" height="1125"><figcaption data-es>Portada Neón en el móvil.</figcaption><figcaption data-en>Neon home on mobile.</figcaption></figure>
+    <figure><img src="capturas/movil-fisicos.jpg" alt="Móvil físicos / Mobile physical" loading="lazy" width="520" height="1125"><figcaption data-es>La tienda física en el móvil.</figcaption><figcaption data-en>The physical store on mobile.</figcaption></figure>
+  </div>
+</div>
+<p class="nota" data-es>Tienda de demostración con datos inventados.</p><p class="nota" data-en>Demo store with made-up data.</p>
+
+<h2 data-es>Garantías técnicas</h2><h2 data-en>Technical guarantees</h2>
+<table>
+  <tr><td data-es>Dinero</td><td data-en>Money</td><td><span data-es>La contabilidad cuadra al céntimo: saldos y puntos son la suma de sus movimientos.</span><span data-en>The books balance to the cent: balances and points are the sum of their movements.</span></td></tr>
+  <tr><td data-es>Entrega</td><td data-en>Delivery</td><td><span data-es>Una credencial se asigna una sola vez; las caídas se marcan y se reponen.</span><span data-en>A credential is assigned only once; failed ones are flagged and replaced.</span></td></tr>
+  <tr><td data-es>Instalación</td><td data-en>Install</td><td><span data-es>Un verificador que solo da verde si la tienda funciona de verdad.</span><span data-en>A checker that only passes when the store truly works.</span></td></tr>
+  <tr><td data-es>Rendimiento</td><td data-en>Performance</td><td><span data-es>Unos 10 ms de servidor y ninguna librería de terceros en la interfaz.</span><span data-en>Around 10 ms server time and no third-party libraries in the interface.</span></td></tr>
+  <tr><td data-es>Diseño</td><td data-en>Design</td><td><span data-es>Comprobado de 390 a 1920 px, con contraste medido en los colores de cada marca.</span><span data-en>Checked from 390 to 1920 px, with contrast measured on each brand's colors.</span></td></tr>
+</table>
+
+<h2 data-es>Construido con</h2><h2 data-en>Built with</h2>
+<table>
+  <tr><td>PHP</td><td><span data-es>Tienda, panel y motor sin framework (14.000 líneas), e instalador, migraciones y verificador (2.700).</span><span data-en>Store, dashboard and engine with no framework (14,000 lines), plus installer, migrations and checker (2,700).</span></td></tr>
+  <tr><td>CSS · JavaScript</td><td><span data-es>La interfaz y las seis portadas, sin librerías (1.800 líneas).</span><span data-en>The interface and six layouts, no libraries (1,800 lines).</span></td></tr>
+  <tr><td>SQL</td><td><span data-es>El esquema y sus migraciones (1.000 líneas).</span><span data-en>The schema and its migrations (1,000 lines).</span></td></tr>
+</table>
+
+<h2 data-es>¿Quieres tu tienda?</h2><h2 data-en>Want your own store?</h2>
+<div class="cta">
+  <h3 data-es>La instalamos en tu dominio</h3><h3 data-en>We install it on your domain</h3>
+  <p data-es>Con tu marca, tu catálogo y tus métodos de cobro, y la mantenemos al día.</p><p data-en>With your brand, your catalog and your payment methods, and we keep it up to date.</p>
+  <div class="contacto" style="border:0;padding:0;background:none">
+    <div><strong>Rafael Blanco</strong><br><span data-es>para Kusarive Solutions LLC</span><span data-en>for Kusarive Solutions LLC</span></div>
+    <a href="https://kusarive.us">kusarive.us</a>
+    <a href="mailto:info@kusarive.us">info@kusarive.us</a>
+    <a class="boton" href="https://wa.me/14073370061">WhatsApp +1 407 337 0061</a>
+  </div>
+</div>
+
+<footer>© 2026 Kusarive Solutions LLC.</footer>
+</div>
+
+<script>
+(function(){
+  var html=document.documentElement;
+  function poner(l){
+    html.lang=l;
+    document.querySelectorAll('.idioma button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+    try{localStorage.setItem('idioma',l)}catch(e){}
+  }
+  document.querySelectorAll('.idioma button').forEach(function(b){b.addEventListener('click',function(){poner(b.dataset.l)})});
+  var g=null;try{g=localStorage.getItem('idioma')}catch(e){}
+  poner(g||((navigator.language||'es').slice(0,2)==='en'?'en':'es'));
+})();
+</script>
+</body>
+</html>
