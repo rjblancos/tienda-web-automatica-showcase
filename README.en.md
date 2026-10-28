@@ -145,8 +145,6 @@ the history each store brought along when it moved to the engine:
 We install the engine on your domain with your brand, your catalog and your
 payment methods, and we keep it up to date.
 
-Rafael Blanco, for Kusarive Solutions LLC
-
 - Web: [kusarive.us](https://kusarive.us)
 - Email: info@kusarive.us
 - WhatsApp: [+1 407 337 0061](https://wa.me/14073370061)

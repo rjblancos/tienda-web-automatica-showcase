@@ -145,8 +145,6 @@ historial que cada tienda trajo al migrar al motor:
 Instalamos el motor en tu dominio con tu marca, tu catálogo y tus métodos de
 cobro, y lo mantenemos al día.
 
-Rafael Blanco, para Kusarive Solutions LLC
-
 - Web: [kusarive.us](https://kusarive.us)
 - Correo: info@kusarive.us
 - WhatsApp: [+1 407 337 0061](https://wa.me/14073370061)
