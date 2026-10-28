@@ -7,7 +7,8 @@
 **Estado:** en producción en 7 tiendas ·
 **Sistema propietario** de Kusarive Solutions LLC ·
 [English version](README.en.md) ·
-[Página de presentación](https://rjblancos.github.io/tienda-web-automatica-showcase/)
+[Página de presentación](https://rjblancos.github.io/tienda-web-automatica-showcase/) ·
+**[Descargar la presentación en PDF](presentacion/Motor-de-tiendas-presentacion.pdf)** (19 diapositivas)
 
 ---
 
@@ -149,5 +150,6 @@ Rafael Blanco, para Kusarive Solutions LLC
 - Web: [kusarive.us](https://kusarive.us)
 - Correo: info@kusarive.us
 - WhatsApp: [+1 407 337 0061](https://wa.me/14073370061)
+- Presentación: [PDF de 19 diapositivas](presentacion/Motor-de-tiendas-presentacion.pdf)
 
 © 2026 Kusarive Solutions LLC. Ver [LICENSE](LICENSE).
